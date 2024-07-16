@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="author" content="Claudia Dutra">
+        <meta name="description" content="Helena,  loja feminina">
+
+        <link rel="icon" type="image/x-icon" href="assets/diamond-icon.ico">
+        <link rel="stylesheet" href="css/reset-style/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+       
+        <script src="https://kit.fontawesome.com/6786615f2b.js" crossorigin="anonymous"></script>
+
+        <title>Helena Loja Feminina</title>
+    </head>
+    <body data-cenario="escuro">
+
+        <!-- Cabeçalho -->
+        <div class="star stardust--toggle" id="star"></div>
+        <header class="cabecalho">
+            <h1>Helena,  loja feminina <span class="geek">geek</span></h1>
+            <p>Produtos para a mulher moderna e pratica</p>
+
+            <p class="cabecalho__dica"></p>
+        </header>
+
+        <!-- Artigos de Luxo -->
+        <main class="artigos-de-luxo">
+            <div class="artigos-de-luxo__titulo">
+                <h2 class="titulo-artigo hidden-scroll" id="titulo-artigo">T-shirts</h2>
+                <p class="para-artigo hidden-scroll" id="para-artigo"></p>
+            </div>
+
+            <div class="container-btn">
+                <button class="btn-add" id="btn-add">Adicionar Produtos</button>
+            </div>
+
+            
+
+            <!-- Seção Formulário -->
+            <section class="container-form" id="container-form">                
+                <form action="" id="form">
+                    <fieldset class="inputs input-titulo">
+                        <label for="titulo">Insira o Título do seu produto.</label>
+                        <input required placeholder="Mínimo de 2 letras..." type="text" name="titulo" id="titulo" minlength="2" maxlength="50">
+                    </fieldset>
+
+                    <fieldset class="inputs input-preco">
+                        <label for="preco">Insira o Preço do seu produto.</label>
+                        <input required placeholder="Minimo de 10 reais" type="number" name="preco" id="preco" min="10" max="100000000">
+                    </fieldset>
+
+                    <fieldset class="inputs input-imagem">
+                        <label for="imagem">Insira o endereço da Imagem do seu produto.</label>
+                        <input required type="url" name="imagem" id="imagem">
+                    </fieldset>
+
+                    <input type="submit" class="" name="submit" id="submit" value="Adicionar">
+                </form>
+            </section>
+
+            <!-- Seção Cards de Luxo -->
+            <section class="container-artigos">
+                <p class="cardluxo__dica cardluxo__dica-pc">Clique com o botão direito para exibir o botão "Delete".</p>
+                <p class="cardluxo__dica cardluxo__dica-mobile">Segure no artigo para exibir o botão "Delete".</p>
+
+                <div class="nothing-icon" id="nothing-icon">
+                    <i class="fa-regular fa-face-smile"></i>
+                </div>
+
+                <div class="container-cardfluxo" id="container-cardfluxo">
+                </div>
+            </section>
+        </main>
+
+        <!-- Rodapé -->
+        <footer>
+            <p>© 2024 Helena Loja Feminina. Desenvolvido por Claudia de Paula Monteiro Dutra  T6 - One.</p>
+            <a href="https://github.com/Frontcla" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </footer>
+
+        <script src="script/request-script/connectaApi.js" type="module"></script>
+        <script src="script/request-script/validation.js" type="module"></script>
+        <script src="script/request-script/constructCard.js" type="module"></script>
+        <script src="script/stars.js"></script>
+        <script src="script/show-form.js"></script>
+        <script src="script/capaluxo.js"></script>
+        <script src="script/scroll.js"></script>
+    </body>
+</html>

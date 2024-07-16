@@ -1,0 +1,215 @@
+/* Estilos Extras */
+.oneBit:hover {
+    transform: rotateY(-30deg);
+    box-shadow: 10px 1px 2px rgba(0, 0, 0, 0.192);
+} 
+
+.abrir {
+    transform: rotateY(-150deg);
+    box-shadow: 10px 1px 2px rgba(0, 0, 0, 0.192);
+}
+
+.visibilidade {
+    visibility: hidden;
+}
+
+
+/* Estilos para Cards de Luxo */
+.container-artigos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px 300px 20px;
+    margin-top: 20px;
+    border-top: 2px solid rgba(0, 0, 0, 0.096);
+}
+
+.nothing-icon {
+    position: absolute;
+    left: 50%;
+    top: 120px;
+    transform: translateX(-50%);
+}
+
+.nothing-icon i {
+    font-size: 10em;
+    color: var(--icon-color);
+}
+
+.hidden-nothing-icon {
+    left: 180%;
+}
+
+.cardluxo__dica {
+    padding-bottom: 80px;
+    text-align: center;
+    line-height: 28px;
+    letter-spacing: 2px;
+    text-decoration: 1px underline var(--font-color);
+    color: var(--font-color);
+}
+
+.cardluxo__dica-mobile {
+    display: none;
+}
+
+.container-cardfluxo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+}
+
+.cardchild {
+    position: relative;
+}
+
+.cardluxo {
+    position: relative;
+    z-index: 1;
+    width: 200px;
+    height: 300px;
+
+    transform-style: preserve-3d;
+    transform: perspective(1500px);
+
+    /* box-shadow: inset 0px 0px 1px 5px #404055; */
+    border-start-end-radius: 12px;
+    background-color: #313141;
+}
+
+.cardluxo::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    padding: 0 2px;
+    box-shadow: 2px 1px 9px rgba(0, 0, 0, 0.808);
+    background-color: #272931;
+}
+
+
+/* Estilos para a Capa */
+.capa {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+
+    transform-origin: left;
+    padding: 10px;
+    transition: all 0.2s ease;
+    background-color: #2e303b;
+}
+
+.capa::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 95%;
+
+    width: 15px;
+    height: 100px;
+    transform: rotateY(190deg);
+    background-color: #e08e8ef3;
+    box-shadow: -3px 1px 1px rgba(245, 165, 165, 0.836);
+}
+
+.capa__titulo h3{
+    font-weight: 500;
+    color: white;
+    line-height: 35px;
+    font-size: 25px;
+}
+
+.capa__titulo .div {
+    width: 100%;
+    margin-top: 20px;
+    padding: 1px;
+    background-color: #555869;
+}
+
+.capa__money {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.capa__money p {
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0px 3px 2px #5558697a;
+}
+
+
+/* Estilo para o artigo */
+.cardluxo__artigo-luxo {
+    padding: 15px;
+}
+
+.cardluxo__artigo-luxo .artigo {
+    position: relative;
+    height: 260px;
+    border: 4px dashed white;
+    border-start-end-radius: 12px;
+    box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.438);
+}
+
+.artigo img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-start-end-radius: 12px;
+    object-fit: cover;
+}
+
+
+/* Estilos para o Botão Delete */
+.delete-card {
+    position: absolute;
+    top: -3px;
+    left: -3px;
+
+    padding: 5px 20px;
+    font-size: 15px;
+    font-weight: bolder;
+    border: 0;
+    box-shadow: 2px 2px 1px 2px rgba(252, 127, 127, 0.753);
+    color: white;
+    background-color: #ec7777;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.show-delete-card {
+    top: -30px;
+    left: 0px;
+}
+
+.delete-card:hover {
+    background-color: #ec5353;
+}
+
+.delete-card:active {
+    font-size: 13px;
+    background-color: #f83e3e;
+}
+
+
+/* Responsivo para Telas menores */
+@media screen and (max-width: 1024px) {
+    .cardluxo__dica-mobile {
+        display: block;
+    }
+
+    .cardluxo__dica-pc {
+        display: none;
+    }
+}
